@@ -17,6 +17,8 @@
 .contact-flex {
   display: flex;
   justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .contact-flex h4 {
@@ -94,7 +96,7 @@ a.contact-social {
 @media only screen and (max-width: 900px) {
   .contact-flex {
     flex-direction: column;
-    gap: 40px;
+    gap: 32px;
   }
 
   .contact-flex p {
