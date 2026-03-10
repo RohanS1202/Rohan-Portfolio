@@ -60,22 +60,20 @@ const Work = () => {
       if (isAnimating) return;
       setIsAnimating(true);
       setCurrentIndex(index);
-      setTimeout(() => setIsAnimating(false), 500);
+      setTimeout(() => setIsAnimating(false), 400);
     },
     [isAnimating]
   );
 
   const goToPrev = useCallback(() => {
-    const newIndex =
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1;
-    goToSlide(newIndex);
+    goToSlide(currentIndex === 0 ? projects.length - 1 : currentIndex - 1);
   }, [currentIndex, goToSlide]);
 
   const goToNext = useCallback(() => {
-    const newIndex =
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1;
-    goToSlide(newIndex);
+    goToSlide(currentIndex === projects.length - 1 ? 0 : currentIndex + 1);
   }, [currentIndex, goToSlide]);
+
+  const project = projects[currentIndex];
 
   return (
     <div className="work-section" id="work">
@@ -85,51 +83,48 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Slides */}
+          {/* Single active slide */}
           <div className="carousel-track-container">
-            <div
-              className="carousel-track"
-              style={{
-                transform: `translateX(-${currentIndex * 100}%)`,
-              }}
-            >
-              {projects.map((project, index) => (
-                <div className="carousel-slide" key={index}>
-                  <div className="carousel-content">
-                    <div className="carousel-info">
-                      <div className="carousel-number">
-                        <h3>0{index + 1}</h3>
-                      </div>
-                      <div className="carousel-details">
-                        <h4>{project.title}</h4>
-                        <p className="carousel-category">{project.category}</p>
-                        <p className="carousel-description">{project.description}</p>
-                        <div className="carousel-tools">
-                          <span className="tools-label">Tools & Features</span>
-                          <p>{project.tools}</p>
-                        </div>
-                        {project.github && (
-                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="carousel-github" data-cursor="disable">
-                            <FaGithub /> View on GitHub <MdArrowOutward />
-                          </a>
-                        )}
-                      </div>
+            <div className="carousel-slide" key={currentIndex}>
+              <div className="carousel-content">
+                <div className="carousel-info">
+                  <div className="carousel-number">
+                    <h3>0{currentIndex + 1}</h3>
+                  </div>
+                  <div className="carousel-details">
+                    <h4>{project.title}</h4>
+                    <p className="carousel-category">{project.category}</p>
+                    <p className="carousel-description">{project.description}</p>
+                    <div className="carousel-tools">
+                      <span className="tools-label">Tools & Stack</span>
+                      <p>{project.tools}</p>
                     </div>
-                    <div className="carousel-highlights">
-                      {project.highlights.map((h, i) => (
-                        <div className="highlight-item" key={i}>
-                          <span className="highlight-dot"></span>
-                          <span>{h}</span>
-                        </div>
-                      ))}
-                    </div>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="carousel-github"
+                        data-cursor="disable"
+                      >
+                        <FaGithub /> View on GitHub <MdArrowOutward />
+                      </a>
+                    )}
                   </div>
                 </div>
-              ))}
+                <div className="carousel-highlights">
+                  {project.highlights.map((h, i) => (
+                    <div className="highlight-item" key={i}>
+                      <span className="highlight-dot"></span>
+                      <span>{h}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Controls: arrows + dots in one row */}
+          {/* Controls */}
           <div className="carousel-controls">
             <button
               className="carousel-arrow"
