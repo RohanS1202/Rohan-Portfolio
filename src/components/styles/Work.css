@@ -25,7 +25,6 @@
 .carousel-wrapper {
   position: relative;
   width: 100%;
-  overflow: hidden;
 }
 
 .carousel-track-container {
@@ -55,6 +54,8 @@
   align-items: center;
   gap: 60px;
   width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .carousel-info {
@@ -322,51 +323,48 @@
   }
 
   .carousel-content {
-    gap: 30px;
-  }
-
-  .carousel-highlights {
-    flex: 1 1 220px;
-    max-width: 240px;
-  }
-
-  .carousel-slide {
-    padding-left: 70px;
-    padding-right: 70px;
-  }
-
-  .carousel-arrow-left {
-    left: 10px;
-  }
-
-  .carousel-arrow-right {
-    right: 10px;
-  }
-}
-
-@media only screen and (max-width: 1300px) {
-  .carousel-content {
-    gap: 20px;
+    gap: 24px;
   }
 
   .carousel-info {
     gap: 20px;
+  }
+
+  .carousel-highlights {
+    flex: 1 1 200px;
+    max-width: 220px;
+  }
+
+  /* arrows move inside; slide padding must exceed arrow width (50px) */
+  .carousel-slide {
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+  .carousel-arrow-left {
+    left: 12px;
+  }
+
+  .carousel-arrow-right {
+    right: 12px;
   }
 }
 
 @media only screen and (max-width: 1100px) {
   .carousel-content {
     flex-direction: column;
-    gap: 24px;
+    gap: 20px;
   }
 
   .carousel-info {
     width: 100%;
+    gap: 16px;
   }
 
   .carousel-highlights {
     flex: unset;
     width: 100%;
+    max-width: 100%;
     box-sizing: border-box;
     flex-direction: row;
     flex-wrap: wrap;
@@ -380,16 +378,17 @@
     font-size: 16px;
   }
 
+  /* arrows are 36px wide; keep padding > 36px */
+  .carousel-slide {
+    padding: 56px 48px 30px;
+  }
+
   .carousel-arrow-left {
-    left: 8px;
+    left: 6px;
   }
 
   .carousel-arrow-right {
-    right: 8px;
-  }
-
-  .carousel-slide {
-    padding: 60px 54px 30px;
+    right: 6px;
   }
 }
 
@@ -416,7 +415,7 @@
   }
 
   .carousel-slide {
-    padding: 50px 40px 24px;
+    padding: 50px 44px 24px;
   }
 }
 
@@ -434,11 +433,15 @@
   }
 
   .carousel-info {
-    gap: 16px;
+    gap: 14px;
   }
 
   .carousel-github {
     font-size: 12px;
     padding: 6px 12px;
+  }
+
+  .carousel-slide {
+    padding: 46px 40px 20px;
   }
 }
