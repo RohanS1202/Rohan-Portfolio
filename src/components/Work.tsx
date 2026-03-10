@@ -48,7 +48,6 @@ const projects = [
       "End-to-end analytics system for NYC's 311 dataset processing 13M+ service requests over 5 years. Achieved ~90% faster queries using DuckDB, deployed a Streamlit dashboard with sub-second interactivity, and computed SLA breach flags across boroughs with automated Tableau exports.",
     highlights: ["13M+ service requests", "~90% faster queries", "Sub-second dashboard", "5 years of data"],
     github: "https://github.com/RohanS1202/311-Service-Requests-from-2010-to-December-2024",
-    github: "",
   },
 ];
 
