@@ -1,6 +1,7 @@
 import { useState, useCallback } from "react";
 import "./styles/Work.css";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { MdArrowBack, MdArrowForward, MdArrowOutward } from "react-icons/md";
+import { FaGithub } from "react-icons/fa6";
 
 const projects = [
   {
@@ -10,6 +11,7 @@ const projects = [
     description:
       "Researched adversarial ML vulnerabilities in deep learning models. Implemented Min-Max adversarial training, improving model robustness by 3× under attack while maintaining strong clean-data accuracy. Evaluated multiple defense strategies balancing accuracy, efficiency, and security.",
     highlights: ["3× robustness improvement", "Min-Max optimization", "Multiple defense strategies", "CIFAR-10 benchmark"],
+    github: "",
   },
   {
     title: "Vehicle Detection & Number Plate Recognition",
@@ -18,6 +20,7 @@ const projects = [
     description:
       "Built a real-time computer vision system for vehicle detection and license plate recognition with 92% accuracy across diverse environments. Processed 1,500+ image features to detect traffic violations and reduced response time by 40% with automated alert mechanisms.",
     highlights: ["92% detection accuracy", "1,500+ image features", "40% faster response time", "Real-time processing"],
+    github: "",
   },
   {
     title: "Gridwise – Renewable Energy Monitoring Dashboard",
@@ -26,6 +29,7 @@ const projects = [
     description:
       "Built an interactive analytics dashboard integrating data from 50+ energy sources and smart grid systems. Implemented forecasting models with 88% accuracy to predict energy demand and improve resource allocation by 20%, with cybersecurity compliance metrics.",
     highlights: ["50+ energy sources", "88% forecast accuracy", "20% better resource allocation", "Smart grid integration"],
+    github: "https://github.com/RohanS1202/Gridwise",
   },
   {
     title: "Crop Price Forecasting System",
@@ -34,6 +38,7 @@ const projects = [
     description:
       "Developed an ML model using 8+ years of agricultural data (weather, soil, market trends) to forecast crop prices with 91% accuracy. Helped 100+ farmers make data-driven crop decisions, improving profitability by 25%.",
     highlights: ["91% forecast accuracy", "8+ years of data", "100+ farmers impacted", "25% profitability increase"],
+    github: "",
   },
   {
     title: "NYC 311 — Response Time & SLA Risk Analysis",
@@ -42,6 +47,7 @@ const projects = [
     description:
       "End-to-end analytics system for NYC's 311 dataset processing 13M+ service requests over 5 years. Achieved ~90% faster queries using DuckDB, deployed a Streamlit dashboard with sub-second interactivity, and computed SLA breach flags across boroughs with automated Tableau exports.",
     highlights: ["13M+ service requests", "~90% faster queries", "Sub-second dashboard", "5 years of data"],
+    github: "",
   },
 ];
 
@@ -120,6 +126,11 @@ const Work = () => {
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>
+                        {project.github && (
+                          <a href={project.github} target="_blank" rel="noopener noreferrer" className="carousel-github" data-cursor="disable">
+                            <FaGithub /> View on GitHub <MdArrowOutward />
+                          </a>
+                        )}
                       </div>
                     </div>
                     <div className="carousel-highlights">
