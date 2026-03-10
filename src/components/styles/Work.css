@@ -45,6 +45,8 @@
   flex-shrink: 0;
   box-sizing: border-box;
   padding: 50px 0;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 .carousel-content {
@@ -296,6 +298,7 @@
   .carousel-arrow-left {
     left: -60px;
   }
+
   .carousel-arrow-right {
     right: -60px;
   }
@@ -305,21 +308,32 @@
   .work-section h2 {
     font-size: 50px;
   }
+
   .carousel-details h4 {
     font-size: 22px;
   }
+
   .carousel-number h3 {
     font-size: 45px;
   }
+
   .carousel-content {
     gap: 30px;
   }
+
   .carousel-highlights {
     flex: 0 0 220px;
   }
+
+  .carousel-slide {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
   .carousel-arrow-left {
     left: 0px;
   }
+
   .carousel-arrow-right {
     right: 0px;
   }
@@ -330,9 +344,11 @@
     flex-direction: column;
     gap: 24px;
   }
+
   .carousel-info {
     width: 100%;
   }
+
   .carousel-highlights {
     flex: unset;
     width: 100%;
@@ -342,19 +358,23 @@
     gap: 12px;
     padding: 16px 20px;
   }
+
   .carousel-arrow {
     width: 36px;
     height: 36px;
     font-size: 16px;
   }
+
   .carousel-arrow-left {
     left: 0px;
   }
+
   .carousel-arrow-right {
     right: 0px;
   }
+
   .carousel-slide {
-    padding: 60px 0 30px;
+    padding: 60px 48px 30px;
   }
 }
 
@@ -362,21 +382,26 @@
   .work-section {
     padding: 50px 0;
   }
+
   .work-section h2 {
     font-size: 40px;
     margin-bottom: 30px;
   }
+
   .carousel-number h3 {
     font-size: 35px;
   }
+
   .carousel-details h4 {
     font-size: 20px;
   }
+
   .carousel-description {
     font-size: 13px;
   }
+
   .carousel-slide {
-    padding: 50px 0 24px;
+    padding: 50px 40px 24px;
   }
 }
 
@@ -384,15 +409,19 @@
   .work-section h2 {
     font-size: 32px;
   }
+
   .carousel-number h3 {
     font-size: 28px;
   }
+
   .carousel-details h4 {
     font-size: 17px;
   }
+
   .carousel-info {
     gap: 16px;
   }
+
   .carousel-github {
     font-size: 12px;
     padding: 6px 12px;

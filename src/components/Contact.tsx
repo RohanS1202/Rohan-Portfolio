@@ -45,14 +45,10 @@ const Contact = () => {
               Instagram <MdArrowOutward />
             </a>
           </div>
-          <div className="contact-box">
-            <h2>
-              Designed and Developed <br /> by <span>Rohan Sagvekar</span>
-            </h2>
-            <h5>
-              <MdCopyright /> 2025
-            </h5>
-          </div>
+        </div>
+        <div className="contact-footer">
+          <span>Designed and Developed by <span className="contact-footer-name">Rohan Sagvekar</span></span>
+          <span><MdCopyright /> 2025</span>
         </div>
       </div>
     </div>
