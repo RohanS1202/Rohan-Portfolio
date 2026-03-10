@@ -13,6 +13,7 @@
   top: 0;
   z-index: 9999;
 }
+
 .header ul {
   font-size: 12px;
   display: flex;
@@ -24,6 +25,7 @@
   gap: 20px;
   align-items: center;
 }
+
 .header ul li {
   margin-left: 0px;
   letter-spacing: 1px;
@@ -32,6 +34,7 @@
   cursor: pointer;
   white-space: nowrap;
 }
+
 .navbar-connect {
   display: none;
   font-size: 13px;
@@ -45,6 +48,7 @@
   text-align: center;
   padding: 0 10px;
 }
+
 .navbar-resume {
   white-space: nowrap;
   color: var(--accentColor);
@@ -56,53 +60,65 @@
   letter-spacing: 1px;
   transition: background 0.3s;
 }
+
 .navbar-resume:hover {
   background: rgba(94, 234, 212, 0.1);
   color: var(--accentColor);
 }
+
 .navbar-title {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.2px;
   flex-shrink: 0;
 }
+
 @media only screen and (min-width: 900px) {
   .navbar-connect {
     display: block;
   }
 }
+
 @media only screen and (min-width: 1100px) {
   .header ul {
     gap: 40px;
     font-size: 14px;
   }
+
   .navbar-connect {
     font-size: 14px;
   }
+
   .navbar-title {
     font-size: 16px;
   }
 }
+
 @media only screen and (min-width: 1300px) {
   .header {
     padding: 35px 0px;
   }
+
   .header ul {
     gap: 50px;
     font-size: 16px;
   }
+
   .navbar-connect {
     font-size: 15px;
   }
+
   .navbar-title {
     font-size: 18px;
   }
 }
+
 @media only screen and (max-width: 500px) {
   .header ul {
     gap: 12px;
     font-size: 11px;
   }
+
   .navbar-resume {
     padding: 3px 8px;
     font-size: 10px;
