@@ -20,7 +20,7 @@ const projects = [
     description:
       "Built a real-time computer vision system for vehicle detection and license plate recognition with 92% accuracy across diverse environments. Processed 1,500+ image features to detect traffic violations and reduced response time by 40% with automated alert mechanisms.",
     highlights: ["92% detection accuracy", "1,500+ image features", "40% faster response time", "Real-time processing"],
-    github: "",
+    github: "https://github.com/RohanS1202/Vehicle-Detection-and-Number-Plate-Recognition-System",
   },
   {
     title: "Gridwise – Renewable Energy Monitoring Dashboard",
@@ -38,7 +38,7 @@ const projects = [
     description:
       "Developed an ML model using 8+ years of agricultural data (weather, soil, market trends) to forecast crop prices with 91% accuracy. Helped 100+ farmers make data-driven crop decisions, improving profitability by 25%.",
     highlights: ["91% forecast accuracy", "8+ years of data", "100+ farmers impacted", "25% profitability increase"],
-    github: "",
+    github: "https://github.com/RohanS1202/Crop-Price-Prediction",
   },
   {
     title: "NYC 311 — Response Time & SLA Risk Analysis",
@@ -47,6 +47,7 @@ const projects = [
     description:
       "End-to-end analytics system for NYC's 311 dataset processing 13M+ service requests over 5 years. Achieved ~90% faster queries using DuckDB, deployed a Streamlit dashboard with sub-second interactivity, and computed SLA breach flags across boroughs with automated Tableau exports.",
     highlights: ["13M+ service requests", "~90% faster queries", "Sub-second dashboard", "5 years of data"],
+    github: "https://github.com/RohanS1202/311-Service-Requests-from-2010-to-December-2024",
     github: "",
   },
 ];
