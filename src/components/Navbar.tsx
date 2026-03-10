@@ -27,7 +27,7 @@ const Navbar = () => {
     links.forEach((elem) => {
       let element = elem as HTMLAnchorElement;
       element.addEventListener("click", (e) => {
-        if (window.innerWidth > 1024) {
+        if (window.innerWidth > 1024 && !element.hasAttribute("download")) {
           e.preventDefault();
           let elem = e.currentTarget as HTMLAnchorElement;
           let section = elem.getAttribute("data-href");
@@ -68,10 +68,12 @@ const Navbar = () => {
               <HoverLinks text="CONTACT" />
             </a>
           </li>
+          <li>
+            <a href="/resume.pdf" download="Rohan_Sagvekar_Resume.pdf" data-cursor="disable" className="navbar-resume">
+              RESUME
+            </a>
+          </li>
         </ul>
-        <a href="/resume.pdf" download="Rohan_Sagvekar_Resume.pdf" data-cursor="disable" className="navbar-resume">
-          RESUME
-        </a>
       </div>
 
       <div className="landing-circle1"></div>
