@@ -68,12 +68,10 @@ const Navbar = () => {
               <HoverLinks text="CONTACT" />
             </a>
           </li>
-          <li>
-            <a href="/resume.pdf" download="Rohan_Sagvekar_Resume.pdf" data-cursor="disable" className="navbar-resume">
-              RESUME
-            </a>
-          </li>
         </ul>
+        <a href="/resume.pdf" download="Rohan_Sagvekar_Resume.pdf" data-cursor="disable" className="navbar-resume">
+          RESUME
+        </a>
       </div>
 
       <div className="landing-circle1"></div>
