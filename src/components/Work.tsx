@@ -3,7 +3,28 @@ import "./styles/Work.css";
 import { MdArrowBack, MdArrowForward, MdArrowOutward } from "react-icons/md";
 import { FaGithub } from "react-icons/fa6";
 
-const projects = [
+type Project = {
+  title: string;
+  category: string;
+  tools: string;
+  description: string;
+  highlights: string[];
+  github: string;
+  tags?: string[];
+  award?: string;
+};
+
+const projects: Project[] = [
+  {
+    title: "RAGprobe Studio",
+    category: "RAG Evaluation & LLM Tooling",
+    tools: "React, Python, ragprobe (PyPI), LangChain, OpenAI API, Vector Databases",
+    description:
+      "Visual evaluation studio built on top of the ragprobe open-source framework. Lets users upload documents, run adversarial RAG stress tests, and inspect faithfulness/recall metrics in a live dashboard. Built for the Agents League Hackathon 2026 (Creative Apps track).",
+    highlights: ["Adversarial RAG stress tests", "Faithfulness & recall metrics", "Built on ragprobe (PyPI)", "Live evaluation dashboard"],
+    github: "https://github.com/RohanS1202/ragprobe",
+    tags: ["Hackathon", "Open Source", "RAG", "LLM Evals"],
+  },
   {
     title: "Adversarial Robustness in Deep Learning",
     category: "Machine Learning Research",
@@ -11,7 +32,7 @@ const projects = [
     description:
       "Researched adversarial ML vulnerabilities in deep learning models. Implemented Min-Max adversarial training, improving model robustness by 3× under attack while maintaining strong clean-data accuracy. Evaluated multiple defense strategies balancing accuracy, efficiency, and security.",
     highlights: ["3× robustness improvement", "Min-Max optimization", "Multiple defense strategies", "CIFAR-10 benchmark"],
-    github: "",
+    github: "https://github.com/RohanS1202/Adversarial-Robustness-in-Deep-Learning",
   },
   {
     title: "Vehicle Detection & Number Plate Recognition",
@@ -48,6 +69,27 @@ const projects = [
       "End-to-end analytics system for NYC's 311 dataset processing 13M+ service requests over 5 years. Achieved ~90% faster queries using DuckDB, deployed a Streamlit dashboard with sub-second interactivity, and computed SLA breach flags across boroughs with automated Tableau exports.",
     highlights: ["13M+ service requests", "~90% faster queries", "Sub-second dashboard", "5 years of data"],
     github: "https://github.com/RohanS1202/311-Service-Requests-from-2010-to-December-2024",
+  },
+  {
+    title: "TideMemory",
+    category: "Climate Tech & Geospatial Visualization",
+    tools: "React, Base44, Real-Time Sensor APIs, Geospatial Visualization",
+    description:
+      "Real-time ocean health monitoring platform built at the NY Tech Week 2026 Code for Climate Hackathon. Visualizes live buoy sensor data, sea surface temperature anomalies, and marine biodiversity stress indicators on an interactive map.",
+    highlights: ["Live buoy sensor data", "Sea surface temperature anomalies", "Marine biodiversity indicators", "Interactive map visualization"],
+    github: "",
+    tags: ["Hackathon", "Climate Tech"],
+    award: "4th place out of 60+ teams",
+  },
+  {
+    title: "Strategic Doc Red-Teamer",
+    category: "Multi-Agent LLM Systems",
+    tools: "Phinite AI Graph Studio, GMI Cloud, Multi-Agent Orchestration, LangChain",
+    description:
+      "Multi-agent system that red-teams strategic documents by generating adversarial critiques, identifying logical gaps, and stress-testing assumptions. Built at NY Tech Week 2026 using Phinite AI Graph Studio and GMI Cloud.",
+    highlights: ["Adversarial document critiques", "Logical gap detection", "Multi-agent orchestration", "Built with Phinite AI + GMI Cloud"],
+    github: "",
+    tags: ["Hackathon", "Multi-Agent", "LLM"],
   },
 ];
 
@@ -94,11 +136,21 @@ const Work = () => {
                   <div className="carousel-details">
                     <h4>{project.title}</h4>
                     <p className="carousel-category">{project.category}</p>
+                    {project.tags && (
+                      <div className="project-badges">
+                        {project.tags.map((tag) => (
+                          <span className="project-badge" key={tag}>
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                     <p className="carousel-description">{project.description}</p>
                     <div className="carousel-tools">
                       <span className="tools-label">Tools & Stack</span>
                       <p>{project.tools}</p>
                     </div>
+                    {project.award && <p className="project-award">🏆 {project.award}</p>}
                     {project.github && (
                       <a
                         href={project.github}

@@ -64,12 +64,17 @@ const Navbar = () => {
             </a>
           </li>
           <li>
+            <a data-href="#experience" href="#experience">
+              <HoverLinks text="EXPERIENCE" />
+            </a>
+          </li>
+          <li>
             <a data-href="#contact" href="#contact">
               <HoverLinks text="CONTACT" />
             </a>
           </li>
           <li>
-            <a href="/resume.pdf" download="Rohan_Sagvekar_Resume.pdf" data-cursor="disable" className="navbar-resume">
+            <a href="/rohan_sagvekar_resume.pdf" download="Rohan_Sagvekar_Resume.pdf" data-cursor="disable" className="navbar-resume">
               RESUME
             </a>
           </li>

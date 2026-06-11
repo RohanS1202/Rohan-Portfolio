@@ -99,6 +99,9 @@ const WhatIDo = () => {
                 <div className="what-tags">Pandas</div>
                 <div className="what-tags">Tableau</div>
                 <div className="what-tags">Power BI</div>
+                <div className="what-tags">LangChain</div>
+                <div className="what-tags">smolagents</div>
+                <div className="what-tags">ragprobe</div>
               </div>
               <div className="what-arrow"></div>
             </div>
@@ -134,6 +137,8 @@ const WhatIDo = () => {
                 <div className="what-tags">AWS</div>
                 <div className="what-tags">GCP</div>
                 <div className="what-tags">Azure</div>
+                <div className="what-tags">MCP Tooling</div>
+                <div className="what-tags">Base44</div>
               </div>
               <div className="what-arrow"></div>
             </div>

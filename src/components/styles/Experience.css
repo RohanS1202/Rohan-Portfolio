@@ -1,0 +1,252 @@
+/* ── Experience Section ── */
+.experience-section {
+  position: relative;
+  z-index: 1;
+  background-color: var(--backgroundColor);
+  padding: 80px 0;
+}
+
+.experience-section h2 {
+  font-size: 70px;
+  font-weight: 500;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.experience-section h2 > span {
+  color: var(--accentColor);
+}
+
+.experience-container {
+  margin: auto;
+}
+
+/* ── Blocks ── */
+.experience-block {
+  margin-bottom: 60px;
+}
+
+.experience-block:last-child {
+  margin-bottom: 0;
+}
+
+.experience-block-label {
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.6;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+/* ── Work Experience Card ── */
+.experience-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
+  padding: 30px 32px;
+  box-sizing: border-box;
+}
+
+.experience-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.experience-card-header h4 {
+  font-size: 22px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.experience-company {
+  font-weight: 200;
+  color: #adacac;
+  margin: 4px 0 0;
+  font-size: 15px;
+}
+
+.experience-duration {
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+.experience-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.experience-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 1.7;
+  color: #c8c7c7;
+}
+
+.experience-dot {
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--accentColor);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(94, 234, 212, 0.5);
+}
+
+/* ── Hackathon Wins ── */
+.hackathon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.hackathon-card {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(4px);
+  padding: 28px;
+  box-sizing: border-box;
+}
+
+.hackathon-emoji {
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.hackathon-card h4 {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0 0 8px;
+}
+
+.hackathon-event {
+  font-weight: 200;
+  color: #adacac;
+  margin: 0 0 12px;
+  font-size: 14px;
+}
+
+.hackathon-project {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin: 0;
+}
+
+/* ── Publications ── */
+.publication-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.publication-card {
+  padding: 24px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.publication-card:first-child {
+  padding-top: 0;
+}
+
+.publication-card:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.publication-card h4 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 6px;
+}
+
+.publication-venue {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--accentColor);
+  margin: 0 0 6px;
+}
+
+.publication-description {
+  font-weight: 200;
+  color: #c8c7c7;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.publication-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--accentColor);
+  border: 1px solid var(--accentColor);
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: background 0.3s ease;
+}
+
+.publication-link:hover {
+  background: rgba(94, 234, 212, 0.1);
+}
+
+/* ── Responsive ── */
+@media only screen and (max-width: 1400px) {
+  .experience-section h2 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .hackathon-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .experience-section {
+    padding: 50px 0;
+  }
+
+  .experience-section h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+
+  .experience-card {
+    padding: 24px;
+  }
+
+  .hackathon-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .experience-section h2 {
+    font-size: 32px;
+  }
+
+  .experience-card-header h4 {
+    font-size: 18px;
+  }
+
+  .experience-card {
+    padding: 20px;
+  }
+}

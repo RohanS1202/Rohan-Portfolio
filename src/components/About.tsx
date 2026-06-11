@@ -5,10 +5,10 @@ const About = () => {
     <div className="about-section" id="about">
       <div className="about-me">
         <h3 className="title">About Me</h3>
-        <p className="para">Hi, I'm Rohan.👋</p>
-        <p className="para">I'm a Data Scientist and ML Engineer who builds intelligent, data-driven applications.</p>
-        <p className="para para-sub">Currently pursuing my graduate degree at Stevens Institute of Technology, I specialize in Python-based systems, predictive modeling, and data analytics. Whether I'm optimizing renewable energy grids, developing computer vision algorithms, or building market forecasting tools, I'm passionate about using AI to solve complex, real-world problems.</p>
-        <p className="para para-cta">Currently open to new opportunities in Data Science, ML, and AI Engineering. Let's build something impactful together.</p>
+        <p className="para">Hi, I'm Rohan. 👋</p>
+        <p className="para">New Jersey based, freshly graduated from Stevens, and always in the middle of building something.</p>
+        <p className="para para-sub">I started with energy forecasting and computer vision, got pulled into the world of LLMs and agentic systems, and haven't looked back since. Along the way I've shipped open source tools, published research, and built at hackathons across NY Tech Week.</p>
+        <p className="para para-cta">Open to AI/ML and Data Engineering roles in the US.</p>
       </div>
     </div>
   );
